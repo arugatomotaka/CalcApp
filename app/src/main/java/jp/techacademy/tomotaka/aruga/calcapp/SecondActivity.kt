@@ -2,7 +2,6 @@ package jp.techacademy.tomotaka.aruga.calcapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import jp.techacademy.tomotaka.aruga.calcapp.databinding.ActivityMainBinding
 import jp.techacademy.tomotaka.aruga.calcapp.databinding.ActivitySecondBinding
 
 class SecondActivity : AppCompatActivity() {
@@ -15,9 +14,7 @@ class SecondActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        val ans = intent.getIntExtra("KEISANKEKKA",0)
-
-
+        val ans = intent.getDoubleExtra("KEISANKEKKA", 0.0)
 
         binding.textView.text = ans.toString()
     }
